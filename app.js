@@ -1,22 +1,7 @@
-// // Define a data inicial (data X) - use o formato "YYYY-MM-DD"
-// const dataInicial = new Date("2024-09-15");
-// const horaInicial = new Time()
-
-// // Obtém a data atual
-// const dataAtual = new Date();
-
-// // Calcula a diferença em milissegundos
-// const diferencaMs = dataAtual - dataInicial;
-
-// // Converte milissegundos para dias (1 dia = 24 horas * 60 minutos * 60 segundos * 1000 milissegundos)
-// const dias = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
-
-// document.getElementById('contadorDias').textContent = `Passaram-se ${dias} dias desde o nosso dia.`;
-
 function calcularAnos(dataInicial) {
     const dataAtual = new Date();
     const anoAtual = dataAtual.getFullYear();
-    const anoInicial = dataInicial.getFullYear(); // Corrigido de 'anoInial' para 'anoInicial'
+    const anoInicial = dataInicial.getFullYear();
 
     let anosPassados = anoAtual - anoInicial;
 
@@ -27,7 +12,6 @@ function calcularAnos(dataInicial) {
         anosPassados--;
     }
 
-    // Verifica se a diferença de anos é zero
     if (anosPassados == 0) {
         document.getElementById('contadorAnos').textContent = `Ainda virão muitos anos pela frente`;
     } else if(anosPassados === 1){
@@ -41,7 +25,7 @@ function calcularAnos(dataInicial) {
 
 
 
-let dataInicial = new Date("2023-09-14T17:34:10");
+let dataInicial = new Date("2024-09-14T17:34:10");
 let horarioAtual = new Date();
 
 let diferencaMs = horarioAtual - dataInicial;
@@ -63,4 +47,8 @@ console.log(`Já se passaram ${anos} anos desde a data inicial.`);
 document.getElementById('contadorDias').textContent = `Passaram-se ${dias} dias desde o nosso dia.`;
 
 document.getElementById('contadorHoras').textContent = `Passram-se ${horas} horas desde o nosso dia.`;
+
+document.getElementById('contadorMinutos').textContent = `Passram-se ${minutos} Minutos desde o nosso dia.`;
+
+document.getElementById('contadorSegundos').textContent = `Passram-se ${segundos} Segundos desde o nosso dia.`;
 
