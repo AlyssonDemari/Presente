@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+main{
+    width: 45%;         
+    height: 85%;
+    background-color: aqua;
+    margin: auto;
+    padding: 30px;
+    display: grid;
+    border-radius: 3%;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1.1fr 0.9fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "FOTOS FOTOS FOTOS"
+      "ANOS ANOS ANOS"
+      "MESES MESES MESES"
+      "DIAS DIAS DIAS"
+      "HORAS HORAS HORAS"
+      "MINUTOS MINUTOS MINUTOS"
+      "SEGUNDOS SEGUNDOS SEGUNDOS";
+      width: 100%;
+      height: 100%;
+  }
+  
+  .FOTOS { grid-area: FOTOS; 
+    background-color: aquamarine;
+    border: 2px solid black;
+}
+  
+  .ANOS { grid-area: ANOS; 
+    background-color: bisque;
+    border: 2px solid black;
+}
+  
+  .MESES { grid-area: MESES;
+    background-color: blue;
+    border: 2px solid black;
+}
+  
+  .DIAS { grid-area: DIAS;
+    background-color: blueviolet;
+    border: 2px solid black;
+}
+  
+  .HORAS { grid-area: HORAS; 
+    background-color: brown;
+    border: 2px solid black;
+}
+  
+  .MINUTOS { grid-area: MINUTOS;
+    background-color: cadetblue;
+    border: 2px solid black;
+}
+  
+  .SEGUNDOS { grid-area: SEGUNDOS; 
+    background-color: chartreuse;
+    border: 2px solid black;
+}
+
+#informacao{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+  
