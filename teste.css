@@ -1,3 +1,119 @@
+body{
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 500px;
+    display: flex;
+
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 500px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 500px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white ;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: aliceblue;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid rgb(255, 0, 212);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 500px;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: chartreuse;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: chartreuse;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: chartreuse;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: chartreuse;
+}
+
+
+/*! ALTERADO */
+
+
 *{
     padding: 0px;
     margin: 0px;
@@ -42,7 +158,6 @@ main{
   }
   
   .FOTOS { grid-area: FOTOS; 
-    background-color: aquamarine;
     border-radius: 10px;
 }
   
@@ -93,12 +208,10 @@ main{
   width: 100%;
   height: 100%;
   position: relative;
-
+  background-color: pink;
 }
 
 .filho{
-  width: 100%;
-  height: 100%;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -107,14 +220,16 @@ main{
 
 .quadrado{
   background-color: blueviolet;
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
+
 }
+
 
 .slider{
   margin: 0 auto;
-  width: 100%;
-  height: 100%;
+  width: 350px;
+  height: 295px;
   overflow: hidden;
   border-radius: 10px;
   border: 3px solid black;
@@ -144,7 +259,7 @@ main{
 
 .manual-navigation{
   position: absolute;
-  width: 100%;
+  width: 350px;
   margin-top: -40px;
   display: flex;
   justify-content: center;
@@ -192,7 +307,7 @@ main{
 
 .navigation-auto{
   position: absolute;
-  width: 100%;
+  width: 350px;
   margin-top: 260px;
   display: flex;
   justify-content: center;
@@ -214,4 +329,3 @@ main{
 #radio4:checked ~ .navigation-auto .auto-btn4{
   background-color: chartreuse;
 }
-

@@ -1,4 +1,4 @@
-let dataPedido = new Date('2003-07-28T17:34:10');
+let dataPedido = new Date('2003-12-20T17:34:10');
 let dataAtual = new Date();
 
 function calcularAnos() {
@@ -84,3 +84,18 @@ function calcularHoras(){
 
 calcularHoras();
 
+let count = 1; 
+document.getElementById("radio1").checked = true;
+
+setInterval( function(){
+    nextImage();
+}, 3500)
+
+function nextImage(){
+    count++; 
+    if (count>4){
+        count = 1
+    }
+
+    document.getElementById('radio'+count).checked = true
+}
