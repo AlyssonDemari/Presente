@@ -21,6 +21,7 @@ main{
     padding: 30px;
     display: grid;
     border-radius: 3%;
+    position: relative;
 }
 
 .container {  display: grid;
@@ -88,4 +89,3 @@ main{
     justify-content: center;
     align-items: center;
 }
-  

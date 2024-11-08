@@ -1,100 +1,86 @@
-const dataInicio = new Date('2024-09-14T17:34:10');
+let dataPedido = new Date('2003-07-28T17:34:10');
+let dataAtual = new Date();
 
-function calcularAnosPassados(dataInicial, dataAtual = new Date()) {
-    let anosPassados = dataAtual.getFullYear() - dataInicial.getFullYear();
+function calcularAnos() {
+    let anosPassados = dataAtual.getFullYear() - dataPedido.getFullYear();
+    
+    if (
+    dataAtual.getMonth() < dataPedido.getMonth() ||
+    (dataAtual.getMonth() === dataPedido.getMonth() && dataAtual.getDate() < dataPedido.getDate())
+    ) {
+        anosPassados--; 
+    }
 
-    const mesAtual = dataAtual.getMonth();
-    const mesInicial = dataInicial.getMonth();
-    const diaAtual = dataAtual.getDate();
-    const diaInicial = dataInicial.getDate();
-
-    if (mesAtual < mesInicial || (mesAtual === mesInicial && diaAtual < diaInicial)) {
-        anosPassados--;
-    } 
-
+    if(anosPassados == 0){
+        console.log('Virão muitos anos')
+        document.getElementById('contadorAnos').innerHTML= 'Ainda virão muitos anos '
+    } else if(anosPassados == 1){
+        console.log('Se passou ${anosPassados} ano')
+        document.getElementById('contadorAnos').innerHTML= `Se passou ${anosPassados} ano `
+    } else {
+        console.log(`se passou ${anosPassados} anos `)
+        document.getElementById('contadorAnos').innerHTML= `Se passou ${anosPassados} anos `
+    }
+        
     
     return anosPassados;
 }
 
-function calcularMesesPassados(dataInicial, dataAtual = new Date()) {
-    let mesesPassados = (dataAtual.getFullYear() - dataInicial.getFullYear()) * 12 + (dataAtual.getMonth() - dataInicial.getMonth());
+calcularAnos();
 
-    const diaAtual = dataAtual.getDate();
-    const diaInicial = dataInicial.getDate();
+function calcularMeses() {
+    
+    let mesesPassados = (dataAtual.getFullYear() - dataPedido.getFullYear()) * 12 + (dataAtual.getMonth() - dataPedido.getMonth());
 
-    if (diaAtual < diaInicial) {
-        mesesPassados--;
-    }
-
-
-    return mesesPassados;
-}
-
-function calcularDiasPassados(dataInicial, dataAtual = new Date()) {
-    // Calcular a diferença em milissegundos
-    const diferencaMilissegundos = dataAtual - dataInicial;
-
-    // Converter milissegundos para dias
-    const diasPassados = Math.floor(diferencaMilissegundos / (1000 * 60 * 60 * 24));
-
-    return diasPassados;
-}
-
-function calcularHorasPassadas(dataInicial, dataAtual = new Date()) {
-    // Calcular a diferença em milissegundos
-    const diferencaMilissegundos = dataAtual - dataInicial;
-
-    // Converter milissegundos para horas
-    const horasPassadas = Math.floor(diferencaMilissegundos / (1000 * 60 * 60));
-
-    return horasPassadas;
-}
-
-function calcularMinutosPassados(dataInicial, dataAtual = new Date()) {
-    // Calcular a diferença em milissegundos
-    const diferencaMilissegundos = dataAtual - dataInicial;
-
-    // Converter milissegundos para minutos
-    const minutosPassados = Math.floor(diferencaMilissegundos / (1000 * 60));
-
-    return minutosPassados;
-}
-
-function calcularSegundosPassados(dataInicial, dataAtual = new Date()) {
-    // Calcular a diferença em milissegundos
-    const diferencaMilissegundos = dataAtual - dataInicial;
-
-    // Converter milissegundos para segundos
-    const segundosPassados = Math.floor(diferencaMilissegundos / 1000);
-
-    if (segundosPassados === 0) {
-        document.getElementById('contadorSegundos').textContent = `Ainda virão muitos segundos pela frente!`;
-    } else if (segundosPassados === 1) {
-        document.getElementById('contadorSegundos').textContent = `Se passou ${segundosPassados} segundo desde o nosso dia`;
+    if (mesesPassados <= 0) {
+        console.log('Virão muitos anos');
+        document.getElementById('contadorMeses').innerHTML = 'Ainda virão muitos meses';
+    } else if (mesesPassados === 1) {
+        console.log(`Se passou ${mesesPassados} mês`);
+        document.getElementById('contadorMeses').innerHTML = `Se passou ${mesesPassados} mês `;
     } else {
-        document.getElementById('contadorSegundos').textContent = `Se passaram ${segundosPassados} segundos desde o nosso dia`;
+        console.log(`Se passaram ${mesesPassados} meses `);
+        document.getElementById('contadorMeses').innerHTML = `Se passaram ${mesesPassados} meses `;
     }
-
-    return segundosPassados;
 }
 
 
+calcularMeses();
 
-document.getElementById('contadorAnos').textContent = `Passaram-se ${calcularAnosPassados(dataInicio)} Anos desde o nosso dia.`;
+function calcularDias() {
+        
+    let diferenca = dataAtual.getTime() - dataPedido.getTime();
+    let dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
 
-document.getElementById('contadorMeses').textContent = `Passaram-se ${calcularMesesPassados(dataInicio)} meses desde o nosso dia.`;
+    document.getElementById('contadorDias').innerHTML= `Se passou ${dias} dias `
+    
+    console.log("Se passou " + dias + ".");
+    
+}
 
-document.getElementById('contadorDias').textContent = `Passaram-se ${calcularDiasPassados(dataInicio)} dias desde o nosso dia.`;
-
-document.getElementById('contadorHoras').textContent = `Passaram-se ${calcularHorasPassadas(dataInicio)} horas desde o nosso dia.`;
-
-document.getElementById('contadorMinutos').textContent = `Passaram-se ${calcularMinutosPassados(dataInicio)} minutos desde o nosso dia.`;
-
-document.getElementById('contadorSegundos').textContent = `Passaram-se ${calcularSegundosPassados(dataInicio)} segundos desde o nosso dia.`;
-
-
-
-
+calcularDias();
 
 
+function calcularHoras(){
+
+    let diferencaMs = dataAtual - dataPedido;
+
+    let segundosTotais = Math.floor(diferencaMs / 1000);
+    let minutosTotais = Math.floor(segundosTotais / 60);
+    let horasTotais = Math.floor(minutosTotais / 60);
+    let dias = Math.floor(horasTotais / 24);
+
+    let horas = horasTotais % 24;
+    let minutos = minutosTotais % 60;
+    let segundos = segundosTotais % 60;
+
+    document.getElementById('contadorHoras').innerHTML= `Se passou ${horasTotais} horas `
+
+    document.getElementById('contadorMinutos').innerHTML= `Se passou ${minutosTotais} minutos `
+
+    document.getElementById('contadorSegundos').innerHTML= `Se passou ${segundosTotais} segundos  `
+
+}
+
+calcularHoras();
 

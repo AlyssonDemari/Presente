@@ -52,3 +52,5 @@ document.getElementById('contadorMinutos').textContent = `Passram-se ${minutosTo
 
 document.getElementById('contadorSegundos').textContent = `Passram-se ${segundosTotais} Segundos desde o nosso dia.`;
 
+
+
