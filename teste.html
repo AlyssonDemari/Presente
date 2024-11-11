@@ -1,129 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste</title>
-    <link rel="stylesheet" href="teste.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkbox em Formato de Coração</title>
+<style>
+  .heart-checkbox {
+    display: none; /* Oculta o checkbox padrão */
+  }
+
+  .heart-label {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .heart-label::before,
+  .heart-label::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #FF4B6E;
+    border-radius: 50%;
+    transition: transform 0.2s;
+  }
+
+  .heart-label::before {
+    top: 0;
+    left: 15px;
+  }
+
+  .heart-label::after {
+    top: 15px;
+    left: 0;
+  }
+
+  /* Cria o coração ao girar os círculos e ajustá-los */
+  .heart-checkbox:checked + .heart-label::before,
+  .heart-checkbox:checked + .heart-label::after {
+    background-color: #FF4B6E;
+    transform: rotate(-45deg);
+  }
+
+  .heart-label::before {
+    transform: rotate(-45deg);
+  }
+
+  .heart-label::after {
+    transform: rotate(45deg);
+  }
+</style>
 </head>
 <body>
 
-    <div class="slider">
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
+<input type="checkbox" id="heart-checkbox" class="heart-checkbox">
+<label for="heart-checkbox" class="heart-label"></label>
 
-            <div class="slide first">
-                <img class="slide first" src="img/UM.png" alt="1">   
-            </div>
-            <div class="slide">
-                <img src="img/DOIS.png" alt="2">
-            </div>
-            <div class="slide">
-                <img src="img/TRES.png" alt="3">
-            </div>
-            <div class="slide">
-                <img src="img/QUATRO.png" alt="4">
-            </div>
-         
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-        </div>
-        <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-        </div>
-    </div>
-
-    <script src="teste.js"></script>
-</body>
-</html>
-
-
-
-<!--! ALTERADO  -->
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presente de namoro</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>
-            <div class="container">
-                <div id="informacao" class="FOTOS">
-                    <div class="pai">
-                        <div class="filho">
-                            <div class="slider">
-                                <div class="slides">
-                                    <input type="radio" name="radio-btn" id="radio1">
-                                    <input type="radio" name="radio-btn" id="radio2">
-                                    <input type="radio" name="radio-btn" id="radio3">
-                                    <input type="radio" name="radio-btn" id="radio4">
-                        
-                                    <div class="slide first">
-                                        <img class="slide first" src="img/UM.png" alt="1">   
-                                    </div>
-                                    <div class="slide">
-                                        <img src="img/DOIS.png" alt="2">
-                                    </div>
-                                    <div class="slide">
-                                        <img src="img/TRES.png" alt="3">
-                                    </div>
-                                    <div class="slide">
-                                        <img src="img/QUATRO.png" alt="4">
-                                    </div>
-                                 
-                                    <div class="navigation-auto">
-                                        <div class="auto-btn1"></div>
-                                        <div class="auto-btn2"></div>
-                                        <div class="auto-btn3"></div>
-                                        <div class="auto-btn4"></div>
-                                    </div>
-                                </div>
-                                <div class="manual-navigation">
-                                    <label for="radio1" class="manual-btn"></label>
-                                    <label for="radio2" class="manual-btn"></label>
-                                    <label for="radio3" class="manual-btn"></label>
-                                    <label for="radio4" class="manual-btn"></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="informacao" class="ANOS">
-                    <p id="contadorAnos">ANOS</p>
-                </div>
-                <div id="informacao" class="MESES">
-                    <p id="contadorMeses">MESES</p>
-                </div>
-                <div id="informacao" class="DIAS">
-                    <p id="contadorDias">DIAS</p>
-                </div>
-                <div id="informacao" class="HORAS">
-                    <p id="contadorHoras">HORAS</p>
-                </div>
-                <div id="informacao" class="MINUTOS">
-                    <p id="contadorMinutos">MINUTOS</p>
-                </div>
-                <div id="informacao" class="SEGUNDOS">
-                    <p id="contadorSegundos">SEGUNDOS</p>
-                </div>
-
-            </div>
-    </main>
-
-    <script src="app.js"></script>
 </body>
 </html>
