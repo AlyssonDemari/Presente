@@ -84,6 +84,21 @@ function calcularHoras(){
 
 calcularHoras();
 
+function calcularBeijo(){
+
+    const dataBeijo = new Date('2024-05-21');
+    const diferencaEmMilissegundos = dataAtual - dataBeijo;
+
+    const milissegundosPorDia = 24 * 60 * 60 * 1000;
+    const diferencaEmDias = Math.floor(diferencaEmMilissegundos / milissegundosPorDia);
+
+    console.log(`Já se passaram ${diferencaEmDias} dias desde 21/05/2024.`);
+    document.getElementById('contadorBeijos').innerHTML= `Se passou ${diferencaEmDias} diasdesde o nosso primeiro beijo`
+    
+}
+
+calcularBeijo()
+
 let count = 1; 
 document.getElementById("radio1").checked = true;
 
