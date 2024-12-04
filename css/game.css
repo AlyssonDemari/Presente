@@ -21,7 +21,7 @@
     background-color: #333;
     border-radius: 5px;
     position: relative;
-    transition: all 1s easy;
+    transition: all 400ms ease;
     transform-style: preserve-3d;
 }
 
@@ -33,15 +33,21 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .front{
     background-color: aqua;
+    background-image: url(../imgGame/moto.jpg);
+    border-radius: 5px;
+    transform: rotateY(180deg);
 }
 
 .back{
-    background-image: url(../imgGame/back-card.png);
-    background-size: cover;
-    background-position: center;
+    background-image: url(../imgGame/backCard.png);
     backface-visibility: hidden;
+    transition: all 1s easy;
 }
