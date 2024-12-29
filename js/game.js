@@ -20,10 +20,10 @@ let firstCard = ''
 let secondCard= ''
 
 const checkEndGame = () => {
-  const disabledCards = document.querySelector('.disabled-card')
-   
-  if(disabledCards.length == 14){
+  const disabledCards = document.querySelectorAll('.disabled-card');
 
+  if (disabledCards.length === 12) {
+    alert(`Parabéns`);
   }
 }
 
