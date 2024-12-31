@@ -17,6 +17,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             height: 100vh;
         }
         section{
@@ -35,6 +36,26 @@
             background-color: aqua;
             border-radius: 10px;
         }
+
+        .voltar{
+            display: block;
+            color: red;
+            text-align: center;
+            width: 100px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: red;
+            font-weight: 600;
+            transition: background-position 0.2s ease-out;
+            background-image: linear-gradient(to right, black 50%, pink 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+        }
+
+        .voltar:hover{
+            background-position: left bottom;
+        }
     </style>
 
 </head>
@@ -46,5 +67,17 @@
             <a href="#"><P>Quiz de Perguntas</P></a>
         </div>
     </section>
+    <script>
+        function botao(){
+        const voltar = document.createElement('a')
+        let section = document.querySelector('body')
+        voltar.href = "../index.html"
+        voltar.innerHTML = "Voltar"
+        voltar.classList = 'voltar'
+        section.insertAdjacentElement('beforeend', voltar)
+        }
+
+        botao()
+    </script>
 </body>
 </html>
