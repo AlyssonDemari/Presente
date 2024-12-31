@@ -1,4 +1,5 @@
 const grid = document.querySelector('.grid');
+const timer = document.querySelector('.timer')
 
 
 const characters = [
@@ -8,6 +9,10 @@ const characters = [
     'orla',
     'pontal',
     'pessoa',
+    'dormindo',
+    'costas',
+    'bosejo',
+    'aniversario',
 ];
 
 const createElement = (tag, className) => {
@@ -22,8 +27,9 @@ let secondCard= ''
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
 
-  if (disabledCards.length === 12) {
-    alert(`Parabéns`);
+  if (disabledCards.length === 20) {
+    clearInterval(this.loop)
+    alert(`Parabéns, seu tempo foi de ${timer.innerHTML} segundos  `);
   }
 }
 
@@ -105,4 +111,29 @@ const loadGame = () => {
     });
 }
 
-loadGame();
+const starTimer = () => {
+  this.loop = setInterval(() => {
+    const currentTime = +timer.innerHTML
+    timer.innerHTML = currentTime + 1
+  }, 1000)
+}
+
+window.onload = () => {
+
+  // 360      450
+
+
+  loadGame();
+  starTimer()
+}
+
+function botao(){
+  const voltar = document.createElement('a')
+  let section = document.querySelector('main')
+  voltar.href = "../pages/menu-games.html"
+  voltar.innerHTML = "Voltar"
+  section.insertAdjacentElement('beforeend', voltar)
+}
+
+botao()
+

@@ -1,9 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
     color: black;
+    --font: "Righteous", serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+    font-family: var(--font);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: pink;
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px;
+}
+
+header span{
+    color: red;
 }
 
 .grid{
@@ -16,7 +49,7 @@
 }
 
 .card{
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/2;
     width: 100%;
     border-radius: 5px;
     position: relative;
@@ -56,4 +89,47 @@
 .disabled-card{
     filter: saturate(0);
     opacity:  0.5;
+}
+
+a{
+    display: inline-block;
+    color: red;
+    text-align: center;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+    font-weight: 600;
+    transition: background-position 0.2s ease-out;
+    background-image: linear-gradient(to right, black 50%, pink 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+a:hover{
+    background-position: left bottom;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    main{
+        width: 50%;
+        min-width: 50vh;
+    }
+
+    header{
+        max-width: 300px;
+        font-size: 20px;
+    }
+    
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+    }
+
+    .card{
+        aspect-ratio: 2/2; 
+    }
 }
