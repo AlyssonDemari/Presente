@@ -29,17 +29,20 @@ function calcularAnos() {
 calcularAnos();
 
 function calcularMeses() {
-    
+
     let mesesPassados = (dataAtual.getFullYear() - dataPedido.getFullYear()) * 12 + (dataAtual.getMonth() - dataPedido.getMonth());
 
-    if (mesesPassados <= 0) {
+    if (dataAtual.getDate() <= 14) {
+        mesesPassados--;
+    }
+    if (mesesPassados < 0) {
         console.log('Virão muitos anos');
         document.getElementById('contadorMeses').innerHTML = 'Ainda virão muitos meses';
     } else if (mesesPassados === 1) {
         console.log(`Se passou ${mesesPassados} mês`);
         document.getElementById('contadorMeses').innerHTML = `Se passou ${mesesPassados} mês `;
     } else {
-        console.log(`Se passaram ${mesesPassados} meses `);
+        console.log(`Se passaram ${mesesPassados} meses`);
         document.getElementById('contadorMeses').innerHTML = `Se passaram ${mesesPassados} meses `;
     }
 }
@@ -93,7 +96,7 @@ function calcularBeijo(){
     const diferencaEmDias = Math.floor(diferencaEmMilissegundos / milissegundosPorDia);
 
     console.log(`Já se passaram ${diferencaEmDias} dias desde 21/05/2024.`);
-    document.getElementById('contadorBeijos').innerHTML= `Se passou ${diferencaEmDias} diasdesde o nosso primeiro beijo`
+    document.getElementById('contadorBeijos').innerHTML= `Se passou ${diferencaEmDias} dias desde o nosso primeiro beijo`
     
 }
 
