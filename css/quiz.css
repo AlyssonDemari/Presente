@@ -1,0 +1,128 @@
+        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+
+        :root{
+            --bg: #3e3f42;
+            --section: #417571 ;
+            --input: #cad5de;
+            --button: #d1deba ;
+            --font: "Roboto Flex", sans-serif;;
+            --font:"Sour Gummy", sans-serif;;
+            --bg:#b3cfe6;
+            --btn:#f0b9cf;
+            --hover: #f085b0;
+
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--bg);
+            font-family: var(--font);
+        }
+
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--section);
+            padding: 10px 30px 20px 30px;
+            width: 300px;
+            height: 450px;
+            border-radius: 20px;
+        }
+
+        a{
+            display: inline-block;
+            color: var(--bg);
+            text-align: center;
+            width: 150px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: var(--button);
+            font-weight: 600;
+            transition: background-position 0.2s ease-out;
+            background-image: linear-gradient(to right, var(--input) 50%, var(--button) 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+        }
+        a:hover{
+            background-position: left bottom;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .questions-container{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 80%;
+        }
+        
+        .answer-container{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .controls-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        button{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border-radius: 15px 3px 15px 3px;
+            width: 10em;
+            transition: 0s ease-in-out;
+        }
+
+        .answer:disabled{
+            color: black;
+            cursor:not-allowed;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        .correct{
+            background-color: rgba(0, 128, 0, 0.637);
+        }
+
+        .incorrect{
+            background-color: rgba(255, 0, 0, 0.705);
+        }
