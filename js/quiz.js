@@ -1,7 +1,7 @@
 const button = () =>{
     const voltar = document.createElement('a')
     let section = document.querySelector('section')
-    voltar.href = "../../index.html"
+    voltar.href = "../pages/menu-games.html"
     voltar.innerHTML = "Voltar"
     section.insertAdjacentElement('afterend', voltar)
 }
