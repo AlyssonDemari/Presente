@@ -133,8 +133,8 @@ const questions = [
     },
     { question: "Qual foi a data do primeiro beijo?",
         answers: [
-            {text: "21/05/2024", correct: false},
-            {text: "19/05/2024", correct: true},
+            {text: "21/05/2024", correct: true},
+            {text: "19/05/2024", correct: false},
             {text: "21/06/2024", correct: false},
             {text: "19/05/2025", correct: false},
         ]
@@ -147,7 +147,7 @@ const questions = [
             {text: "Nenhuma das opções", correct: false},
         ]
     },
-    { question: "Como foi selebrado o primeiro aniversário de namoro juntos?",
+    { question: "Onde foi celebrado o primeiro aniversário de namoro juntos?",
         answers: [
             {text: "Fomos a um restaurante", correct: false},
             {text: "Fomos a um parque", correct: false},
@@ -187,12 +187,12 @@ const questions = [
             {text: "Anaconda", correct: false},
         ]
     },
-    { question: "Se vocês fossem personagens de um filme, qual seria o enredo?",
+    { question: "O que a gente mais gosta de fazer juntos??",
         answers: [
-            {text: "Uma comédia romântica cheia de momentos embaraçosos", correct: false},
-            {text: "Uma aventura épica com muitas viagens", correct: false},
-            {text: "Um drama emocionante sobre superação juntos", correct: true},
-            {text: "Uma animação com muita diversão e risadas", correct: false},
+            {text: "Jogar videogame", correct: false},
+            {text: "Assistir filme", correct: false},
+            {text: "Apenas estar justos", correct: true},
+            {text: "Sair por ai", correct: false},
         ]
     },
 ]
