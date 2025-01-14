@@ -92,16 +92,16 @@ let message = ""
 
     switch (true) {
         case (performance >= 90):
-        message = "Excelente :)"
+        message = "Excelente, meu tatum lindo  :)"
         break
         case (performance >= 70):
-        message = "Muito bom :)"
+        message = "Você se saiu muito bem, linda :)"
         break
         case (performance >= 50):
-        message = "Bom"
+        message = "Foi bom =)"
         break
         default:
-        message = "Pode melhorar :("
+        message = "Esperava mais de você, linda :("
     }
 
     questionsCont.innerHTML = 
@@ -111,11 +111,6 @@ let message = ""
         <button onclick=window.location.reload() class="button">Refazer teste</button>
     `
 }
-
-
-
-
-
 
 
 
@@ -176,7 +171,7 @@ const questions = [
             {text: "Alianças de namoro", correct: false},
         ]
     },
-    { question: "Qual é nosso hobby?",
+    { question: "O que virou nosso hobby?",
         answers: [
             {text: "Assistir série", correct: false},
             {text: "Resolver o cubo mágico", correct: true},
