@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(#977DFF, #F2E6EE);
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 1rem;
+  width: 90%;
+  height: 4rem;
+  background-color: #00033D;
+  border-radius: 5rem;
+}
+header .container {
+  position: absolute;
+  width: 100%;
+  height: 4rem;
+  border-radius: 5rem;
+}
+header .container .itens {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  width: 100%;
+  height: 4rem;
+  border-radius: 5rem;
+}
+header .container .itens i {
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+}
+header .container .itens i.active {
+  background-color: #0033FF;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+article {
+  width: 100%;
+  height: 50%;
+}
+article .container-slide {
+  width: 100%;
+  height: 38vh;
+  overflow: hidden;
+}
+article .container-slide .container-item {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+article .container-slide .container-item .item {
+  min-width: 100%;
+  height: 100%;
+}
+article .container-slide .container-item .item img {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+}/*# sourceMappingURL=index.css.map */
