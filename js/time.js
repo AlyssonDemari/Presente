@@ -40,10 +40,10 @@ function calcularMeses() {
         document.getElementById('contadorMeses').innerHTML = 'Ainda virão muitos meses';
     } else if (mesesPassados === 1) {
         console.log(`Se passou ${mesesPassados} mês`);
-        document.getElementById('contadorMeses').innerHTML = `Se passou ${mesesPassados} mês `;
+        document.getElementById('contadorMeses').innerHTML = `${mesesPassados} `;
     } else {
         console.log(`Se passaram ${mesesPassados} meses`);
-        document.getElementById('contadorMeses').innerHTML = `Se passaram ${mesesPassados} meses `;
+        document.getElementById('contadorMeses').innerHTML = `${mesesPassados}`;
     }
 }
 
@@ -55,7 +55,7 @@ function calcularDias() {
     let diferenca = dataAtual.getTime() - dataPedido.getTime();
     let dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
 
-    document.getElementById('contadorDias').innerHTML= `Se passou ${dias} dias `
+    document.getElementById('contadorDias').innerHTML= ` ${dias} `
     
     console.log("Se passou " + dias + ".");
     
@@ -77,11 +77,11 @@ function calcularHoras(){
     let minutos = minutosTotais % 60;
     let segundos = segundosTotais % 60;
 
-    document.getElementById('contadorHoras').innerHTML= `Se passou ${horasTotais} horas `
+    document.getElementById('contadorHoras').innerHTML= ` ${horasTotais}  `
 
-    document.getElementById('contadorMinutos').innerHTML= `Se passou ${minutosTotais} minutos `
+    document.getElementById('contadorMinutos').innerHTML= ` ${minutosTotais}  `
 
-    document.getElementById('contadorSegundos').innerHTML= `Se passou ${segundosTotais} segundos  `
+    document.getElementById('contadorSegundos').innerHTML= ` ${segundosTotais}   `
 
 }
 

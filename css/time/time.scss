@@ -7,3 +7,68 @@ body{
     height: 100vh;
     width: 100%;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#informacao{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 8.4rem;
+    height: 7rem;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid black;
+
+    #contadorAnos{
+        background: rgb(17, 0, 255);
+    }
+    
+}
+
+
+.MESES, .DIAS, .HORAS, .MINUTOS, .SEGUNDOS{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 8.4rem;
+    height: 7rem;
+    background: rgb(12, 214, 89);
+    border-radius: 5px;
+
+    img{
+        position: absolute;
+        top: -2rem;
+        left: -.2rem;
+        width: 8.7rem;
+    }
+    h1{
+        background: #F01A23;
+        width: 100%;
+        height: 30%;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    p{
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
+}
