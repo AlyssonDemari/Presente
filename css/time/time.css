@@ -1,4 +1,5 @@
 body {
+  background: linear-gradient(#F2E6EE, #977DFF);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +13,40 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 1rem;
+  width: 90%;
+  height: 4rem;
+  background-color: #00033D;
+  border-radius: 5rem;
+}
+header .container {
+  position: absolute;
+  width: 100%;
+  height: 4rem;
+  border-radius: 5rem;
+}
+header .container .itens {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  width: 100%;
+  height: 4rem;
+  border-radius: 5rem;
+}
+header .container .itens i {
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+}
+header .container .itens i.active {
+  background-color: #0033FF;
 }
 
 section {
