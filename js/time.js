@@ -1,4 +1,4 @@
-let dataPedido = new Date('2024-09-14T17:34:10');
+let dataPedido = new Date('2023-09-14T17:34:10');
 let dataAtual = new Date();
 
 function calcularAnos() {
