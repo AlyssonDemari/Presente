@@ -6,7 +6,12 @@
 }
 
 body {
-  background: linear-gradient(#F2E6EE, #977DFF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#F2E6EE, #977DFF) no-repeat;
+  width: 100%;
+  height: 100vh;
 }
 
 header {
@@ -18,6 +23,7 @@ header {
   height: 4rem;
   background-color: #00033D;
   border-radius: 5rem;
+  z-index: 9999;
 }
 header .container {
   position: absolute;
@@ -50,9 +56,8 @@ header .container .itens i.active {
   flex-wrap: wrap;
   text-align: center;
   gap: 2rem;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  border: 2px solid red;
 }
 .container-calender .calender {
   position: relative;
@@ -86,8 +91,7 @@ header .container .itens i.active {
 .container-calender .heart {
   display: flex;
   justify-content: center;
-  height: 20rem;
-  width: 100%;
+  height: 15rem;
 }
 .container-calender .heart .container-heart {
   position: relative;
@@ -96,15 +100,16 @@ header .container .itens i.active {
 }
 .container-calender .heart .container-heart h1 {
   position: absolute;
-  top: 25%;
+  top: 35%;
   left: 0%;
   color: black;
   border: 2px solid transparent;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .container-calender .heart .container-heart i {
   color: #ED1B24;
   font-size: 15rem;
+  z-index: -1;
 }
 
 @keyframes beat {
