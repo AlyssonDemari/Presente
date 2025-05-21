@@ -1,5 +1,5 @@
 $linear: linear-gradient(to top, red, rgb(255, 97, 97));
-$bg: linear-gradient(#F2E6EE, #977DFF) no-repeat;
+$bg: linear-gradient(#F2E6EE, #977DFF) no-repeat center center fixed;
 $header: #00033D;
 $active: #0033FF;
 
@@ -78,6 +78,7 @@ header{
     gap: 2rem;
     height: 100%;
     width: 100% ;
+    padding: 5rem 0;
 
     .calender{
         position: relative;

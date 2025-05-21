@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#F2E6EE, #977DFF) no-repeat;
+  background: linear-gradient(#F2E6EE, #977DFF) no-repeat center center fixed;
   width: 100%;
   height: 100%;
 }
@@ -58,6 +58,7 @@ header .container .itens i.active {
   gap: 2rem;
   height: 100%;
   width: 100%;
+  padding: 5rem 0;
 }
 .container-calender .calender {
   position: relative;

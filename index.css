@@ -47,8 +47,13 @@ header .container .itens i.active {
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100vh;
+}
+main .calender {
+  width: 100%;
+  max-width: 40rem;
 }
 
 article {
