@@ -1,18 +1,12 @@
-body {
-  background: linear-gradient(#F2E6EE, #977DFF);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 90%;
-  width: 100%;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(#F2E6EE, #977DFF);
 }
 
 header {
@@ -49,16 +43,6 @@ header .container .itens i.active {
   background-color: #0033FF;
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 2rem;
-  width: 100%;
-  height: 100%;
-}
-
 .container-calender {
   display: flex;
   justify-content: center;
@@ -66,8 +50,9 @@ section {
   flex-wrap: wrap;
   text-align: center;
   gap: 2rem;
-  height: 75%;
+  height: 100vh;
   width: 100%;
+  border: 2px solid red;
 }
 .container-calender .calender {
   position: relative;

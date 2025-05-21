@@ -3,16 +3,6 @@ $bg: linear-gradient(#F2E6EE, #977DFF);
 $header: #00033D;
 $active: #0033FF;
 
-body{
-    background: $bg;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 90%;
-    width: 100%;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -20,12 +10,15 @@ body{
   font-family: "Poppins", sans-serif;
 }
 
+body{
+    background: $bg;
+}
+
 header{
     position: fixed;
     left: 50%;
     transform: translate(-50%);
     bottom: 1rem;
-
     width: 90%;
     height: 4rem;
     background-color: $header;
@@ -59,15 +52,15 @@ header{
     }
 }
 
-section{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 2rem;
-    width: 100%;
-    height: 100%;
-}
+// section{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     gap: 2rem;
+//     width: 100%;
+//     height: 100%;
+// }
 
 .container-calender{
     display: flex;
@@ -76,8 +69,9 @@ section{
     flex-wrap: wrap;
     text-align: center;
     gap: 2rem;
-    height: 75%;
+    height: 100vh;
     width: 100% ;
+    border: 2px solid red;
 
     .calender{
         position: relative;
