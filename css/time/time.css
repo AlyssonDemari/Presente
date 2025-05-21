@@ -11,7 +11,7 @@ body {
   align-items: center;
   background: linear-gradient(#F2E6EE, #977DFF) no-repeat;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 header {
