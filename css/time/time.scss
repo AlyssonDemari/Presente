@@ -79,11 +79,22 @@ header{
     height: 100%;
     width: 100% ;
     padding: 5rem 0;
-
+    
     .calender{
         position: relative;
         height: 8rem;
         min-width: 9rem;
+        opacity: 0;
+        transform: translate(0, 300px);
+        animation: hide 1s ease-in-out forwards;
+
+        &.item-1 { animation-delay: 0.3s; }
+        &.item-2 { animation-delay: 1s; }
+        &.item-3 { animation-delay: 1.5s; }
+        &.item-4 { animation-delay: 2s; }
+        &.item-5 { animation-delay: 2.5s; }
+        &.item-6 { animation-delay: 3s; }
+        &.item-7 { animation-delay: 3.5s; }
         
         
         .calender-header{
@@ -149,5 +160,15 @@ header{
     }
     40%{
         transform: scale(1.2);
+    }
+}
+
+@keyframes hide{
+    0%{
+        transform: translate(0, 300px) ;
+    }
+    100%{
+        transform: translate(0, 0px);
+        opacity: 1;
     }
 }

@@ -64,6 +64,30 @@ header .container .itens i.active {
   position: relative;
   height: 8rem;
   min-width: 9rem;
+  opacity: 0;
+  transform: translate(0, 300px);
+  animation: hide 1s ease-in-out forwards;
+}
+.container-calender .calender.item-1 {
+  animation-delay: 0.3s;
+}
+.container-calender .calender.item-2 {
+  animation-delay: 1s;
+}
+.container-calender .calender.item-3 {
+  animation-delay: 1.5s;
+}
+.container-calender .calender.item-4 {
+  animation-delay: 2s;
+}
+.container-calender .calender.item-5 {
+  animation-delay: 2.5s;
+}
+.container-calender .calender.item-6 {
+  animation-delay: 3s;
+}
+.container-calender .calender.item-7 {
+  animation-delay: 3.5s;
 }
 .container-calender .calender .calender-header {
   padding: 0.8rem 0 0.5rem 0;
@@ -119,5 +143,14 @@ header .container .itens i.active {
   }
   40% {
     transform: scale(1.2);
+  }
+}
+@keyframes hide {
+  0% {
+    transform: translate(0, 300px);
+  }
+  100% {
+    transform: translate(0, 0px);
+    opacity: 1;
   }
 }/*# sourceMappingURL=time.css.map */
