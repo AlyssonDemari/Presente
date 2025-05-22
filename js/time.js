@@ -106,7 +106,8 @@ calcularHoras();
 function calcularBeijo(){
     const textBeijo = document.querySelector('.textBeijo');
 
-    const dataBeijo = new Date('2024-05-21');
+    // Beijo oficial foi no dia 21, mas deu um dia amais na contagem
+    const dataBeijo = new Date('2024-05-22');
     const diferencaEmMilissegundos = dataAtual - dataBeijo;
 
     const milissegundosPorDia = 24 * 60 * 60 * 1000;
