@@ -21,22 +21,25 @@
     </header>
     <section>
         <h1>Escolha um jogo</h1>
-        <div class="btn">
-            <a href="memory.html"><P>Jogo da Memória</P></a>
-            <a href="quiz.html"><P>Quiz de Perguntas</P></a>
-        </div>
-    </section>
-    <script>
-        function botao(){
-        const voltar = document.createElement('a')
-        let section = document.querySelector('body')
-        voltar.href = "../index.html"
-        voltar.innerHTML = "Voltar"
-        voltar.classList = 'voltar'
-        section.insertAdjacentElement('beforeend', voltar)
-        }
 
-        botao()
+        <a href="memory.html" class="game">
+            <div>
+                <img src="../img/memory.png" alt="Memory Game">
+            </div>
+            <p>Momory Game</p>
+        </a>
+        <a href="quiz.html" class="game">
+            <div>
+                <img src="../img/quizGame.png" alt="Memory Game">
+            </div>
+            <p>Quiz Game</p>
+        </a>
+        
+
+    </section>
+
+    <script>
+
     </script>
 </body>
 </html>
